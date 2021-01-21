@@ -1,0 +1,12 @@
+int power(int base, int exp)
+{
+  base=powe(base,exp);
+return base;
+}
+powe(int base,int exp)
+{
+  if(exp==0)
+    return 1;
+  else
+    return (base * (powe(base,exp-1)));
+}
