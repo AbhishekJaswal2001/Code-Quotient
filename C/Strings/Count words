@@ -1,0 +1,16 @@
+int countWords(char str[]) 
+{
+  int i=0,s=0,flag=0;
+  while(str[i]!='\0')
+  {
+    if(str[i]==' ' || str[i]=='\t' || str[i]=='\n')
+      flag=0;
+    else if(!flag)
+    {
+      flag=1;
+      s++;
+    }
+    i++;
+  }
+  return s;
+}
