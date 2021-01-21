@@ -1,0 +1,26 @@
+/* use the array a and store the minimum, maximum and sum of array elements in respective pointer variables.
+As these are used in main functions, so just store the values in them. */
+
+void multiReturnArray(int *a, int size, int *min, int *max, int *sum)
+{
+  int i=0,j=size-1;
+  *min=*(a+0);
+  *max=*(a+0);
+  *sum=0;
+  while(i<j)
+  {
+    *sum=*sum+*(a+i)+*(a+j);
+    if(*(a+i)>*max)
+      *max=*(a+i);
+    if(*(a+j)>*max)
+      *max=*(a+j);
+    if(*(a+i)<*min)
+      *min=*(a+i);
+    if(*(a+j)<*min)
+      *min=*(a+j);
+    i++;
+    j--;
+  }
+  if(size%2!=0)
+    *sum=*sum+*(a+i);
+}
