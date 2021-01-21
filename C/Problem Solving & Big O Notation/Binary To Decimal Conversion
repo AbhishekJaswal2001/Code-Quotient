@@ -1,0 +1,9 @@
+int binaryToDecimal(int n){
+  int dec=0,base=1;
+  while(n>0){
+      dec = dec + (n%10)*base;
+    n = n/10;
+    base = base*2;
+  }
+  return dec;
+}
