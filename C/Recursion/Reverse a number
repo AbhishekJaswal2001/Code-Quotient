@@ -1,0 +1,20 @@
+#include <stdio.h>
+/* Include other headers as needed */
+int s=0;
+int main()
+{
+int n;
+  scanf("%d",&n);
+  s=reverse(n);
+  printf("%d",s);
+}
+   reverse(int n)
+   {
+     if(n)
+     {
+       s=s*10+n%10;
+       reverse(n/10);
+     }
+     else
+       return s;
+   }
