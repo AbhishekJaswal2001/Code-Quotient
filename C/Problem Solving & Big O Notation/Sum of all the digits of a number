@@ -1,0 +1,20 @@
+#include <stdio.h>
+/* Include other headers as needed */
+int main()
+{
+int n,s,h;
+  scanf("%d",&n);
+  while(n>0)
+  {
+     s=0;
+    scanf("%d",&h);
+    while(h>0)
+    {
+      s=s+h%10;
+      h=h/10;
+    }
+    printf("%d\n",s);
+    n--;
+  }
+    return 0;
+}
