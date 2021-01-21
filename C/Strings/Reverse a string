@@ -1,0 +1,14 @@
+void reverseString (char str[])
+{
+  int n=strlen(str),i=0;
+  char t;
+  n--;
+  while(i<n)
+  {
+    t=str[i];
+    str[i]=str[n];
+    str[n]=t;
+    i++;
+    n--;
+  }
+}
