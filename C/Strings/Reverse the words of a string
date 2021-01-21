@@ -1,0 +1,44 @@
+void revStart(char *str, int i)
+{
+  int start = i;
+  int end = i;
+  int c = *(str+i);
+  while(((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z')))
+  {
+    i++;
+    c = *(str+i);
+    end++;
+  }
+  end -= 1;
+  int s = start;
+  int e = end;
+  while(start < end)
+  {
+    int c = *(str+start);
+    *(str+start) = *(str+end);
+    *(str+end) = c;
+    start++;
+    end--;
+  }
+  for(int j=s;j<=e;j++)
+  {
+    char c = *(str+j);
+    printf("%c",c);
+  }
+}
+void revWordsString(char *str)
+{
+  int i=0;
+  int inWords = 0;
+  while(*(str+i) != '\0'){char c = *(str+i);if(c == ' ' || c == '\t')
+  {
+    printf(" ");
+    inWords = 0;
+  }
+  else if(!inWords)
+  {
+    inWords = 1;
+    revStart(str, i);
+  }
+                          i++;}
+}
