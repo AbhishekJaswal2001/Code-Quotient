@@ -1,0 +1,43 @@
+#include <stdio.h>
+/* Include other headers as needed */
+int main()
+{ int t;
+ scanf("%d",&t);
+ while(t)
+ {
+   int n;
+   scanf("%d",&n);
+   int a[n];
+   for(int i=0;i<n;i++)
+   {
+     scanf("%d",&a[i]);
+   }
+   int r;
+   scanf("%d",&r);
+   if(n==1 || n==0)
+     printf("%d\n",a[0]);
+   else
+   {
+   if(r>=n)
+     r=r-n;
+   for(int i=r;i<n;i++)
+   {
+     if(i==n-1 && r==0)
+       printf("%d",a[i]);
+     else
+     printf("%d ",a[i]);
+   }
+     for(int i=0;i<r;i++)
+     {
+       if(i==r-1)
+         printf("%d",a[i]);
+       else
+     printf("%d ",a[i]);
+     }
+     if(t!=0)
+       printf("\n");
+   }
+  t--;
+ }
+ return 0;
+}
