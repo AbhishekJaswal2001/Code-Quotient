@@ -1,0 +1,32 @@
+#include <stdio.h>
+/* Include other headers as needed */
+int main()
+{
+  int i,j,n,rc,p;
+  scanf("%d",&n);
+  while(n--)
+  {
+   scanf("%d",&rc);
+    int a[rc][rc];
+    for(i=0;i<rc;i++)
+      for(j=0;j<rc;j++)
+        scanf("%d",&a[i][j]);
+    j=rc-1;
+    p=j;
+    i=0;
+    while(rc--)
+    {
+    while(j!=-1)
+    {
+      if(j==0)
+        printf("%d",a[j--][i]);
+      else
+    printf("%d ",a[j--][i]);
+    }
+      j=p;
+    i++;
+    printf("\n");
+    }
+    printf("\n");
+  }
+}
