@@ -1,0 +1,38 @@
+/*
+1
+
+121
+
+12321
+
+1234321
+
+123454321
+
+*/
+
+
+#include <stdio.h>
+/* Include other headers as needed */
+int main()
+{
+
+    int n,l;
+  scanf("%d",&n);
+  for(int i=0;i<n;i++)
+  {
+    l=1;
+    for(int j=1;j<=i;j++)
+    {
+      printf("%d",l);
+      l++;
+    }
+    while(l>0)
+    {
+      printf("%d",l);
+      l--;
+    }
+    printf("\n");
+  }
+    return 0;
+}
