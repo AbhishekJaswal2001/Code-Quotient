@@ -1,0 +1,79 @@
+#include <stdio.h>
+int main()
+{
+int n;
+  int h;
+  scanf("%d",&n);
+  if(n>=2000)
+  {
+    h=n/2000;
+    n=n-(h*2000);
+    printf("%d ",h);
+  }
+  else
+    printf("0 ");
+    if(n>=500)
+  {
+    h=n/500;
+    n=n-(h*500);
+    printf("%d ",h);
+  }
+  else
+    printf("0 ");
+    if(n>=100)
+  {
+    h=n/100;
+    n=n-(h*100);
+    printf("%d ",h);
+  }
+  else
+    printf("0 ");
+    if(n>=50)
+  {
+    h=n/50;
+    n=n-(h*50);
+    printf("%d ",h);
+  }
+  else
+    printf("0 ");
+    if(n>=20)
+  {
+    h=n/20;
+    n=n-(h*20);
+    printf("%d ",h);
+  }
+  else
+    printf("0 ");
+  if(n>=10)
+  {
+    h=n/10;
+    n=n-(h*10);
+    printf("%d ",h);
+  }
+  else
+    printf("0 ");
+    if(n>=5)
+  {
+    h=n/5;
+    n=n-(h*5);
+    printf("%d ",h);
+  }
+  else
+    printf("0 ");
+    if(n>=2)
+  {
+    h=n/2;
+    n=n-(h*2);
+    printf("%d ",h);
+  }
+  else
+    printf("0 ");
+    if(n>=1)
+  {
+    h=n/1;
+    n=n-(h*1);
+    printf("%d ",h);
+  }
+  else
+    printf("0 ");
+}
