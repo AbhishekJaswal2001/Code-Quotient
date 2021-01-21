@@ -1,0 +1,20 @@
+void reduceSequence(char *str, char ch)
+{
+  int i=0,n=0,l=0;
+  while(str[i]!='\0')
+  {
+    if(str[i]==ch)
+    {
+      n++;
+      if(n==1)
+        str[l++]=str[i];
+    }
+    else
+    {
+      str[l++]=str[i];
+      n=0;
+    }
+    i++;
+  }
+  str[l]='\0';
+}
