@@ -1,0 +1,22 @@
+*/shift all the negative elements to the right side of the array while maintaining the original order of the positive and negative elements.*/
+
+
+void moveElements(int arr[], int n)
+{
+  int key, j; 
+        for (int i = 1; i < n; i++) { 
+            key = arr[i]; 
+
+            if (key < 0) 
+                continue; 
+  
+           
+            j = i - 1; 
+            while (j >= 0 && arr[j] < 0) { 
+                arr[j + 1] = arr[j]; 
+                j = j - 1; 
+            } 
+            arr[j + 1] = key; 
+        } 
+  
+}
