@@ -1,0 +1,11 @@
+void reverseArray(int *a, int size)
+{
+  int t,i=0,j=size-1;
+  while(i<j)
+  {
+    t=*(a+i);
+    *(a+i)=*(a+j);
+    *(a+j)=t;
+    i++;j--;
+  }
+}
