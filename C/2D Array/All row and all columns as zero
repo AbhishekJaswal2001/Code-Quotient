@@ -1,0 +1,32 @@
+void makeAllZero(int mat[ROWS][COLS], int r, int c)
+{
+  int ma[r][c];
+  int i,j;
+  for(i=0;i<r;i++)
+    for(j=0;j<c;j++)
+      ma[i][j]=-1;
+  for(i=0;i<r;i++)
+  {
+    for(j=0;j<c;j++)
+      
+      if(mat[i][j]==0)
+      {
+         int l;
+        //i=row;
+        //j=col;
+  for(l=0;l<c;l++)
+    ma[i][l]=0;
+   for(l=0;l<r;l++)
+    ma[l][j]=0;
+      }
+  }
+  for(i=0;i<r;i++)
+    for(j=0;j<c;j++)
+      if(ma[i][j]!=0)
+        ma[i][j]=mat[i][j];
+  for(i=0;i<r;i++)
+  {
+    for(j=0;j<c;j++)
+    mat[i][j]=ma[i][j];
+  }
+}
