@@ -1,0 +1,15 @@
+  void removeDuplicates(int *arr, int *size)
+  {
+  int i=0,j,k;
+  for(j=1;j<*size;j++)
+  {
+  if(*(arr+i)!=*(arr+j))
+  {
+  i++;
+  *(arr+i)=*(arr+j);
+  }
+  }
+  *size=i+1;
+  for(k=0;k<=*size;k++)
+  printf("%d\n",*(arr+k));
+  }
