@@ -1,0 +1,33 @@
+/* The below class is given for use as Nodes
+class Node {
+  int data;
+  Node next;
+  Node(int d) {
+    data=d;
+  }
+} */
+class Result {
+  public static int count(Node a)
+  {
+    Node b=a;
+    int c=1;
+    while(b.next!=a)
+    {
+      b=b.next;
+      c++;
+    }
+    return c;
+  }
+  static int loopInList(Node head) {
+Node a=head;
+  Node b=head;
+    while(a!=null && b!=null && b.next!=null)
+    {
+      a=a.next;
+      b=b.next.next;
+      if(a==b)
+        return count(a);
+    }
+    return 0;
+  }
+}
